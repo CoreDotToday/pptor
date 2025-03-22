@@ -3,8 +3,8 @@ import axios from './config'
 // export const SERVER_URL = 'http://localhost:5000'
 // export const SERVER_URL = (import.meta.env.MODE === 'development') ? '/api' : 'https://server.pptist.cn'
 export const SERVER_URL = (import.meta.env.MODE === 'development') ? '/api' : '/api'
-export const ASSET_URL = 'https://asset.pptist.cn'
-// export const ASSET_URL = 'https://ppt.core.today'
+// export const ASSET_URL = 'https://asset.pptist.cn'
+export const ASSET_URL = 'https://ppt.core.today'
 
 export default {
   getMockData(filename: string): Promise<any> {
