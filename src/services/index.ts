@@ -11,9 +11,9 @@ export default {
     return axios.get(`./mocks/${filename}.json`)
   },
 
-  getFileData(): Promise<any> {
+  getFileData(value?: string): Promise<any> {
     const urlParams = new URLSearchParams(window.location.search)
-    const filename = urlParams.get('filename') || 'slides'
+    const filename = value || urlParams.get('filename') || 'slides'
     return axios.get(`${ASSET_URL}/data/${filename}.json`)
   },
 
