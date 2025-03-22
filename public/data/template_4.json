@@ -64,7 +64,7 @@
                   "rotate": 0,
                   "defaultFontName": "",
                   "defaultColor": "#333",
-                  "content": "<p style=\"text-align: center;\"><strong><span style=\"font-size: 26.7px;\"><span style=\"font-family: Paperlogy;\"><span style=\"color: rgb(128, 147, 125);\">사업 보고서|업무 요약|업무 계획</span></span></span></strong></p>",
+                  "content": "<p style=\"text-align: center;\"><strong><span style=\"font-size: 26.7px;\"><span style=\"font-family: Paperlogy;\"><span style=\"color: rgb(128, 147, 125);\">사업 보고서 | 업무 요약 | 업무 계획</span></span></span></strong></p>",
                   "vertical": false,
                   "wordSpace": 5
               },
@@ -7568,7 +7568,7 @@
                   "rotate": 0,
                   "defaultFontName": "",
                   "defaultColor": "#333",
-                  "content": "<p style=\"text-align: center;\"><strong><span style=\"font-size: 54px;\"><span style=\"color: rgb(128, 147, 125);\">谢谢聆听</span></span></strong></p>",
+                  "content": "<p style=\"text-align: center;\"><strong><span style=\"font-size: 54px;\"><span style=\"color: rgb(128, 147, 125);\">감사합니다</span></span></strong></p>",
                   "vertical": false
               },
               {
@@ -7581,7 +7581,7 @@
                   "rotate": 0,
                   "defaultFontName": "",
                   "defaultColor": "#333",
-                  "content": "<p style=\"text-align: center;\"><strong><span style=\"font-size: 26.7px;\"><span style=\"font-family: Paperlogy;\"><span style=\"color: rgb(128, 147, 125);\">사업 보고서|업무 요약|업무 계획</span></span></span></strong></p>",
+                  "content": "<p style=\"text-align: center;\"><strong><span style=\"font-size: 26.7px;\"><span style=\"font-family: Paperlogy;\"><span style=\"color: rgb(128, 147, 125);\">사업 보고서 | 업무 요약 | 업무 계획</span></span></span></strong></p>",
                   "vertical": false,
                   "wordSpace": 5
               },
@@ -7681,7 +7681,7 @@
                   "rotate": 0,
                   "defaultFontName": "",
                   "defaultColor": "#333",
-                  "content": "<p style=\"text-align: center;\"><strong><span style=\"font-size: 54px;\"><span style=\"color: rgb(128, 147, 125);\">感谢</span><span style=\"color: rgba(221,182,170,1);\">你的</span><span style=\"color: rgb(128, 147, 125);\">观看</span></span></strong></p>",
+                  "content": "<p style=\"text-align: center;\"><strong><span style=\"font-size: 54px;\"><span style=\"color: rgb(128, 147, 125);\">들어주셔서 </span><span style=\"color: rgba(221,182,170,1);\">감사</span><span style=\"color: rgb(128, 147, 125);\">합니다</span></span></strong></p>",
                   "vertical": false
               },
               {
@@ -7741,7 +7741,7 @@
                   "fixedRatio": false,
                   "rotate": 0,
                   "text": {
-                      "content": "<p style=\"text-align: center;\"><em><span style=\"font-size: 16px;\"><span style=\"color: rgb(255, 255, 255);\">日期：XXX</span></span></em></p>",
+                      "content": "<p style=\"text-align: center;\"><em><span style=\"font-size: 16px;\"><span style=\"color: rgb(255, 255, 255);\">2025/01/01</span></span></em></p>",
                       "defaultFontName": "",
                       "defaultColor": "#333",
                       "align": "middle"
@@ -7808,7 +7808,7 @@
                   "rotate": 0,
                   "defaultFontName": "",
                   "defaultColor": "#333",
-                  "content": "<p style=\"text-align: center;\"><strong><span style=\"font-size: 54px;\"><span style=\"color: rgb(128, 147, 125);\">谢谢聆听</span></span></strong></p>",
+                  "content": "<p style=\"text-align: center;\"><strong><span style=\"font-size: 54px;\"><span style=\"color: rgb(128, 147, 125);\">감사합니다</span></span></strong></p>",
                   "vertical": false
               },
               {

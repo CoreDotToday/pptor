@@ -82,7 +82,7 @@ export const useSlidesStore = defineStore('slides', {
         cover: 'https://ppt.core.today/images/template_3.jpg',
       },
       {
-        name: '모란디 컬러 조합',
+        name: '모란디 컬러',
         id: 'template_4',
         cover: 'https://ppt.core.today/images/template_4.jpg',
       },
