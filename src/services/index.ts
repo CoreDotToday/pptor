@@ -13,8 +13,20 @@ export default {
 
   getFileData(value?: string): Promise<any> {
     const urlParams = new URLSearchParams(window.location.search)
-    const filename = value || urlParams.get('filename') || 'slides'
+    const filenameParam = urlParams.get('filename')
+    
+    console.log('value:', value)
+    console.log('filenameParam:', filenameParam)
+    console.log('type of filenameParam:', typeof filenameParam)
+    
+    const filename = filenameParam || value || 'slides'
+    console.log('Final filename:', filename)
+    
     return axios.get(`${ASSET_URL}/data/${filename}.json`)
+      .catch(error => {
+        console.error('Error loading file:', error)
+        throw error
+      })
   },
 
   AIPPT_Outline(
