@@ -5,7 +5,7 @@
         style="width: 60%;"
         :value="richTextAttrs.fontname"
         search
-        searchLabel="搜索字体"
+        searchLabel="폰트 검색"
         @update:value="value => emitRichTextCommand('fontname', value as string)"
         :options="FONTS"
       >
@@ -17,7 +17,7 @@
         style="width: 40%;"
         :value="richTextAttrs.fontsize"
         search
-        searchLabel="搜索字号"
+        searchLabel="글자 크기 검색"
         @update:value="value => emitRichTextCommand('fontsize', value as string)"
         :options="fontSizeOptions.map(item => ({
           label: item, value: item
@@ -37,7 +37,7 @@
             @update:modelValue="value => emitRichTextCommand('color', value)"
           />
         </template>
-        <TextColorButton first v-tooltip="'文字颜色'" :color="richTextAttrs.color">
+        <TextColorButton first v-tooltip="'글자 색상'" :color="richTextAttrs.color">
           <IconText />
         </TextColorButton>
       </Popover>
@@ -48,21 +48,21 @@
             @update:modelValue="value => emitRichTextCommand('backcolor', value)"
           />
         </template>
-        <TextColorButton v-tooltip="'文字高亮'" :color="richTextAttrs.backcolor">
+        <TextColorButton v-tooltip="'글자 하이라이트'" :color="richTextAttrs.backcolor">
           <IconHighLight />
         </TextColorButton>
       </Popover>
       <Button 
         class="font-size-btn"
         style="width: 20%;"
-        v-tooltip="'增大字号'"
+        v-tooltip="'글자 크기 키우기'"
         @click="emitRichTextCommand('fontsize-add')"
       ><IconFontSize />+</Button>
       <Button
         last
         class="font-size-btn"
         style="width: 20%;"
-        v-tooltip="'减小字号'"
+        v-tooltip="'글자 크기 줄이기'"
         @click="emitRichTextCommand('fontsize-reduce')"
       ><IconFontSize />-</Button>
     </ButtonGroup>
@@ -71,25 +71,25 @@
       <CheckboxButton 
         style="flex: 1;"
         :checked="richTextAttrs.bold"
-        v-tooltip="'加粗'"
+        v-tooltip="'굵게'"
         @click="emitRichTextCommand('bold')"
       ><IconTextBold /></CheckboxButton>
       <CheckboxButton 
         style="flex: 1;"
         :checked="richTextAttrs.em"
-        v-tooltip="'斜体'"
+        v-tooltip="'기울임'"
         @click="emitRichTextCommand('em')"
       ><IconTextItalic /></CheckboxButton>
       <CheckboxButton 
         style="flex: 1;"
         :checked="richTextAttrs.underline"
-        v-tooltip="'下划线'"
+        v-tooltip="'밑줄'"
         @click="emitRichTextCommand('underline')"
       ><IconTextUnderline /></CheckboxButton>
       <CheckboxButton 
         style="flex: 1;"
         :checked="richTextAttrs.strikethrough"
-        v-tooltip="'删除线'"
+        v-tooltip="'취소선'"
         @click="emitRichTextCommand('strikethrough')"
       ><IconStrikethrough /></CheckboxButton>
     </ButtonGroup>
@@ -98,25 +98,25 @@
       <CheckboxButton
         style="flex: 1;"
         :checked="richTextAttrs.superscript"
-        v-tooltip="'上标'"
+        v-tooltip="'윗첨자'"
         @click="emitRichTextCommand('superscript')"
       >A²</CheckboxButton>
       <CheckboxButton
         style="flex: 1;"
         :checked="richTextAttrs.subscript"
-        v-tooltip="'下标'"
+        v-tooltip="'아래첨자'"
         @click="emitRichTextCommand('subscript')"
       >A₂</CheckboxButton>
       <CheckboxButton
         style="flex: 1;"
         :checked="richTextAttrs.code"
-        v-tooltip="'行内代码'"
+        v-tooltip="'인라인 코드'"
         @click="emitRichTextCommand('code')"
       ><IconCode /></CheckboxButton>
       <CheckboxButton
         style="flex: 1;"
         :checked="richTextAttrs.blockquote"
-        v-tooltip="'引用'"
+        v-tooltip="'인용구'"
         @click="emitRichTextCommand('blockquote')"
       ><IconQuote /></CheckboxButton>
     </ButtonGroup>
@@ -125,23 +125,23 @@
       <CheckboxButton
         first
         style="flex: 1;"
-        v-tooltip="'清除格式'"
+        v-tooltip="'서식 지우기'"
         @click="emitRichTextCommand('clear')"
       ><IconFormat /></CheckboxButton>
       <CheckboxButton
         style="flex: 1;"
         :checked="!!textFormatPainter"
-        v-tooltip="'格式刷（双击连续使用）'"
+        v-tooltip="'서식 복사(더블 클릭 시 연속 사용)'"
         @click="toggleTextFormatPainter()"
         @dblclick="toggleTextFormatPainter(true)"
       ><IconFormatBrush /></CheckboxButton>
       <Popover placement="bottom-end" trigger="click" v-model:value="linkPopoverVisible" style="width: 33.33%;">
         <template #content>
           <div class="link-popover">
-            <Input v-model:value="link" placeholder="请输入超链接" />
+            <Input v-model:value="link" placeholder="하이퍼링크를 입력하세요" />
             <div class="btns">
-              <Button size="small" :disabled="!richTextAttrs.link" @click="removeLink()" style="margin-right: 5px;">移除</Button>
-              <Button size="small" type="primary" @click="updateLink(link)">确认</Button>
+              <Button size="small" :disabled="!richTextAttrs.link" @click="removeLink()" style="margin-right: 5px;">제거</Button>
+              <Button size="small" type="primary" @click="updateLink(link)">확인</Button>
             </div>
           </div>
         </template>
@@ -149,7 +149,7 @@
           last
           style="width: 100%;"
           :checked="!!richTextAttrs.link"
-          v-tooltip="'超链接'"
+          v-tooltip="'하이퍼링크'"
           @click="openLinkPopover()"
         ><IconLinkOne /></CheckboxButton>
       </Popover>
@@ -162,10 +162,10 @@
       :value="richTextAttrs.align"
       @update:value="value => emitRichTextCommand('align', value)"
     >
-      <RadioButton value="left" v-tooltip="'左对齐'" style="flex: 1;"><IconAlignTextLeft /></RadioButton>
-      <RadioButton value="center" v-tooltip="'居中'" style="flex: 1;"><IconAlignTextCenter /></RadioButton>
-      <RadioButton value="right" v-tooltip="'右对齐'" style="flex: 1;"><IconAlignTextRight /></RadioButton>
-      <RadioButton value="justify" v-tooltip="'两端对齐'" style="flex: 1;"><IconAlignTextBoth /></RadioButton>
+      <RadioButton value="left" v-tooltip="'왼쪽 정렬'" style="flex: 1;"><IconAlignTextLeft /></RadioButton>
+      <RadioButton value="center" v-tooltip="'가운데 정렬'" style="flex: 1;"><IconAlignTextCenter /></RadioButton>
+      <RadioButton value="right" v-tooltip="'오른쪽 정렬'" style="flex: 1;"><IconAlignTextRight /></RadioButton>
+      <RadioButton value="justify" v-tooltip="'양쪽 정렬'" style="flex: 1;"><IconAlignTextBoth /></RadioButton>
     </RadioGroup>
 
     <div class="row" passive>
@@ -174,7 +174,7 @@
           first
           :type="richTextAttrs.bulletList ? 'primary' : 'default'"
           style="flex: 1;"
-          v-tooltip="'项目符号'"
+          v-tooltip="'글머리 기호'"
           @click="emitRichTextCommand('bulletList')"
         ><IconList /></Button>
         <Popover trigger="click" v-model:value="bulletListPanelVisible">
@@ -199,7 +199,7 @@
           first
           :type="richTextAttrs.orderedList ? 'primary' : 'default'"
           style="flex: 1;"
-          v-tooltip="'编号'"
+          v-tooltip="'번호 매기기'"
           @click="emitRichTextCommand('orderedList')"
         ><IconOrderedList /></Button>
         <Popover trigger="click" v-model:value="orderedListPanelVisible">
@@ -222,20 +222,20 @@
 
     <div class="row">
       <ButtonGroup style="flex: 1;" passive>
-        <Button first style="flex: 1;" v-tooltip="'减小段落缩进'" @click="emitRichTextCommand('indent', '-1')"><IconIndentLeft /></Button>
+        <Button first style="flex: 1;" v-tooltip="'단락 들여쓰기 감소'" @click="emitRichTextCommand('indent', '-1')"><IconIndentLeft /></Button>
         <Popover trigger="click" v-model:value="indentLeftPanelVisible">
           <template #content>
-            <PopoverMenuItem @click="emitRichTextCommand('textIndent', '-1')">减小首行缩进</PopoverMenuItem>
+            <PopoverMenuItem @click="emitRichTextCommand('textIndent', '-1')">첫 줄 들여쓰기 감소</PopoverMenuItem>
           </template>
           <Button last class="popover-btn"><IconDown /></Button>
         </Popover>
       </ButtonGroup>
       <div style="width: 10px;"></div>
       <ButtonGroup style="flex: 1;" passive>
-        <Button first style="flex: 1;" v-tooltip="'增大段落缩进'" @click="emitRichTextCommand('indent', '+1')"><IconIndentRight /></Button>
+        <Button first style="flex: 1;" v-tooltip="'단락 들여쓰기 증가'" @click="emitRichTextCommand('indent', '+1')"><IconIndentRight /></Button>
         <Popover trigger="click" v-model:value="indentRightPanelVisible">
           <template #content>
-            <PopoverMenuItem @click="emitRichTextCommand('textIndent', '+1')">增大首行缩进</PopoverMenuItem>
+            <PopoverMenuItem @click="emitRichTextCommand('textIndent', '+1')">첫 줄 들여쓰기 증가</PopoverMenuItem>
           </template>
           <Button last class="popover-btn"><IconDown /></Button>
         </Popover>
@@ -243,6 +243,7 @@
     </div>
   </div>
 </template>
+
 
 <script lang="ts" setup>
 import { ref, watch } from 'vue'

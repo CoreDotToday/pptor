@@ -10,7 +10,7 @@
       class="input"
       v-if="type === 'web'" 
       v-model:value="address" 
-      placeholder="请输入网页链接地址"
+      placeholder="웹 링크 주소를 입력하세요."
     />
 
     <Select 
@@ -21,13 +21,13 @@
     />
 
     <div class="preview" v-if="type === 'slide' && selectedSlide">
-      <div>预览：</div>
+      <div>미리보기:</div>
       <ThumbnailSlide class="thumbnail" :slide="selectedSlide" :size="500" />
     </div>
 
     <div class="btns">
-      <Button @click="emit('close')" style="margin-right: 10px;">取消</Button>
-      <Button type="primary" @click="save()">确认</Button>
+      <Button @click="emit('close')" style="margin-right: 10px;">취소</Button>
+      <Button type="primary" @click="save()">확인</Button>
     </div>
   </div>
 </template>
@@ -63,7 +63,7 @@ const slideId = ref('')
 
 const slideOptions = computed(() => {
   return slides.value.map((item, index) => ({
-    label: `幻灯片 ${index + 1}`,
+    label: `슬라이드 ${index + 1}`,
     value: item.id,
     disabled: currentSlide.value.id === item.id,
   }))
@@ -78,8 +78,8 @@ const selectedSlide = computed(() => {
 })
 
 const tabs: TabItem[] = [
-  { key: 'web', label: '网页链接' },
-  { key: 'slide', label: '幻灯片页面' },
+  { key: 'web', label: '웹 링크' },
+  { key: 'slide', label: '슬라이드 페이지' },
 ]
 
 const { setLink } = useLink()

@@ -1,17 +1,17 @@
 <template>
   <div class="presenter-view">
     <div class="toolbar">
-      <div class="tool-btn" @click="changeViewMode('base')"><IconListView class="tool-icon" /><span>普通视图</span></div>
-      <div class="tool-btn" :class="{ 'active': writingBoardToolVisible }" @click="writingBoardToolVisible = !writingBoardToolVisible"><IconWrite class="tool-icon" /><span>画笔</span></div>
-      <div class="tool-btn" :class="{ 'active': laserPen }" @click="laserPen = !laserPen"><IconMagic class="tool-icon" /><span>激光笔</span></div>
-      <div class="tool-btn" :class="{ 'active': timerlVisible }" @click="timerlVisible = !timerlVisible"><IconStopwatchStart class="tool-icon" /><span>计时器</span></div>
+      <div class="tool-btn" @click="changeViewMode('base')"><IconListView class="tool-icon" /><span>일반 보기</span></div>
+      <div class="tool-btn" :class="{ 'active': writingBoardToolVisible }" @click="writingBoardToolVisible = !writingBoardToolVisible"><IconWrite class="tool-icon" /><span>펜</span></div>
+      <div class="tool-btn" :class="{ 'active': laserPen }" @click="laserPen = !laserPen"><IconMagic class="tool-icon" /><span>레이저 포인터</span></div>
+      <div class="tool-btn" :class="{ 'active': timerlVisible }" @click="timerlVisible = !timerlVisible"><IconStopwatchStart class="tool-icon" /><span>타이머</span></div>
       <div class="tool-btn" @click="() => fullscreenState ? manualExitFullscreen() : enterFullscreen()">
         <IconOffScreenOne class="tool-icon" v-if="fullscreenState" />
         <IconOffScreenOne class="tool-icon" v-else />
-        <span>{{ fullscreenState ? '退出全屏' : '全屏' }}</span>
+        <span>{{ fullscreenState ? '전체화면 종료' : '전체화면' }}</span>
       </div>
       <Divider class="divider" />
-      <div class="tool-btn" @click="exitScreening()"><IconPower class="tool-icon" /><span>结束放映</span></div>
+      <div class="tool-btn" @click="exitScreening()"><IconPower class="tool-icon" /><span>프레젠테이션 종료</span></div>
     </div>
 
     <div class="content">
@@ -64,10 +64,10 @@
 
     <div class="remark">
       <div class="header">
-        <span>演讲者备注</span>
+        <span>발표자 노트</span>
         <span>P {{slideIndex + 1}} / {{slides.length}}</span>
       </div>
-      <div class="remark-content ProseMirror-static" :class="{ 'empty': !currentSlideRemark }" :style="{ fontSize: remarkFontSize + 'px' }" v-html="currentSlideRemark || '无备注'"></div>
+      <div class="remark-content ProseMirror-static" :class="{ 'empty': !currentSlideRemark }" :style="{ fontSize: remarkFontSize + 'px' }" v-html="currentSlideRemark || '노트 없음'"></div>
       <div class="remark-scale">
         <div :class="['scale-btn', { 'disable': remarkFontSize === 12 }]" @click="setRemarkFontSize(remarkFontSize - 2)"><IconMinus /></div>
         <div :class="['scale-btn', { 'disable': remarkFontSize === 40 }]" @click="setRemarkFontSize(remarkFontSize + 2)"><IconPlus /></div>
@@ -75,6 +75,7 @@
     </div>
   </div>
 </template>
+
 
 <script lang="ts" setup>
 import { computed, nextTick, ref, watch } from 'vue'

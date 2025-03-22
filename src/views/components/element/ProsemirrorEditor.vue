@@ -129,7 +129,7 @@ const execCommand = ({ target, action }: RichTextCommand) => {
       addMark(editorView, mark)
 
       if (item.value && !document.fonts.check(`16px ${item.value}`)) {
-        message.warning('字体需要等待加载下载后生效，请稍等')
+        message.warning('글꼴이 로드될 때까지 잠시만 기다려주세요.')
       }
     }
     else if (item.command === 'fontsize' && item.value) {

@@ -22,8 +22,6 @@
           <PopoverMenuItem @click="setDialogForExport('pptx')">파일 내보내기</PopoverMenuItem>
           <PopoverMenuItem @click="resetSlides(); mainMenuVisible = false">슬라이드 초기화</PopoverMenuItem>
           <PopoverMenuItem @click="openMarkupPanel(); mainMenuVisible = false">슬라이드 유형 태깅</PopoverMenuItem>
-          <PopoverMenuItem @click="goLink('https://github.com/pipipi-pikachu/PPTist/issues')">피드백 보내기</PopoverMenuItem>
-          <PopoverMenuItem @click="goLink('https://github.com/pipipi-pikachu/PPTist/blob/master/doc/Q&A.md')">자주 묻는 질문</PopoverMenuItem>
           <PopoverMenuItem @click="mainMenuVisible = false; hotkeyDrawerVisible = true">단축키 모음</PopoverMenuItem>
         </template>
         <div class="menu-item"><IconHamburgerButton class="icon" /></div>
