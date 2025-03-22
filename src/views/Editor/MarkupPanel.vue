@@ -10,7 +10,7 @@
   >
     <div class="container">
       <div class="row">
-        <div style="width: 40%;">현재 페이지 유형：</div>
+        <div style="width: 40%;">현재 페이지 유형:</div>
         <Select
           style="width: 60%;"
           :value="slideType"
@@ -19,7 +19,7 @@
         />
       </div>
       <div class="row" v-if="handleElement && (handleElement.type === 'text' || (handleElement.type === 'shape' && handleElement.text))">
-        <div style="width: 40%;">현재 텍스트 유형：</div>
+        <div style="width: 40%;">현재 텍스트 유형:</div>
         <Select
           style="width: 60%;"
           :value="textType"
@@ -28,7 +28,7 @@
         />
       </div>
       <div class="row" v-else-if="handleElement && handleElement.type === 'image'">
-        <div style="width: 40%;">현재 이미지 유형：</div>
+        <div style="width: 40%;">현재 이미지 유형:</div>
         <Select
           style="width: 60%;"
           :value="imageType"

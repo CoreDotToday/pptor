@@ -32,7 +32,7 @@
           <Popover placement="top" trigger="manual" :value="sizePopoverType === 'pen'" @hide="sizePopoverType = ''">
             <template #content>
               <div class="setting">
-                <div class="label">펜 굵기：</div>
+                <div class="label">펜 굵기:</div>
                 <Slider class="size-slider" :min="4" :max="10" :step="2" v-model:value="penSize" />
               </div>
             </template>
@@ -49,7 +49,7 @@
                   <IconArrowRight class="icon" :class="{ 'active': shapeType === 'arrow' }" @click="shapeType = 'arrow'" />
                 </div>
                 <Divider type="vertical" />
-                <div class="label">펜 굵기：</div>
+                <div class="label">펜 굵기:</div>
                 <Slider class="size-slider" :min="2" :max="8" :step="2" v-model:value="shapeSize" />
               </div>
             </template>
@@ -60,7 +60,7 @@
           <Popover placement="top" trigger="manual" :value="sizePopoverType === 'mark'" @hide="sizePopoverType = ''">
             <template #content>
               <div class="setting">
-                <div class="label">형광펜 굵기：</div>
+                <div class="label">형광펜 굵기:</div>
                 <Slider class="size-slider" :min="16" :max="40" :step="4" v-model:value="markSize" />
               </div>
             </template>
@@ -71,7 +71,7 @@
           <Popover placement="top" trigger="manual" :value="sizePopoverType === 'eraser'" @hide="sizePopoverType = ''">
             <template #content>
               <div class="setting">
-                <div class="label">지우개 크기：</div>
+                <div class="label">지우개 크기:</div>
                 <Slider class="size-slider" :min="20" :max="200" :step="20" v-model:value="rubberSize" />
               </div>
             </template>

@@ -15,7 +15,7 @@
     </div>
 
     <div class="row switch-row">
-      <div style="width: 40%;">자동 재생：</div>
+      <div style="width: 40%;">자동 재생:</div>
       <div class="switch-wrapper" style="width: 60%;">
         <Switch 
           :value="handleVideoElement.autoplay" 

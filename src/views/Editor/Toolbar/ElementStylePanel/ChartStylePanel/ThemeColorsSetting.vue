@@ -1,10 +1,10 @@
 <template>
   <div class="theme-colors-setting">
-    <div class="title">图表主题配色</div>
+    <div class="title">차트 테마 색상</div>
 
     <div class="list">
       <div class="row" v-for="(item, index) in themeColors" :key="index">
-        <div class="label" style="width: 40%;">主题配色{{ index + 1 }}：</div>
+        <div class="label" style="width: 40%;">테마 색상 {{ index + 1 }}:</div>
         <Popover trigger="click" style="width: 60%;">
           <template #content>
             <ColorPicker
@@ -14,7 +14,7 @@
           </template>
           <div class="color-btn-wrap" style="width: 100%;">
             <ColorButton :color="item" />
-            <div class="delete-color-btn" v-tooltip="'删除'" @click.stop="deleteThemeColor(index)" v-if="index !== 0"><IconCloseSmall /></div>
+            <div class="delete-color-btn" v-tooltip="'삭제'" @click.stop="deleteThemeColor(index)" v-if="index !== 0"><IconCloseSmall /></div>
           </div>
         </Popover>
       </div>
@@ -23,13 +23,14 @@
         :disabled="themeColors.length >= 10"
         @click="addThemeColor()"
       >
-        <IconPlus class="btn-icon" /> 添加主题色
+        <IconPlus class="btn-icon" /> 테마 색상 추가
       </Button>
     </div>
 
-    <Button class="btn" type="primary" @click="setThemeColors()">确认</Button>
+    <Button class="btn" type="primary" @click="setThemeColors()">확인</Button>
   </div>
 </template>
+
 
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue'

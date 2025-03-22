@@ -62,7 +62,7 @@
         <Divider :margin="20" />
 
         <div class="row-block">
-          <div class="label">글자 색상：</div>
+          <div class="label">글자 색상:</div>
           <div class="colors">
             <div class="color" 
               v-for="color in colors" 
@@ -74,7 +74,7 @@
           </div>
         </div>
         <div class="row-block">
-          <div class="label">채우기 색상：</div>
+          <div class="label">채우기 색상:</div>
           <div class="colors">
             <div class="color" 
               v-for="color in colors" 

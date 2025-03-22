@@ -100,7 +100,7 @@
     <Divider />
 
     <div class="row">
-      <div style="width: 40%;">행 수：</div>
+      <div style="width: 40%;">행 수:</div>
       <div class="set-count" style="width: 60%;">
         <Button class="btn" :disabled="rowCount <= 1" @click="setTableRow(rowCount - 1)"><IconMinus /></Button>
         <div class="count-text">{{rowCount}}</div>
@@ -108,7 +108,7 @@
       </div>
     </div>
     <div class="row">
-      <div style="width: 40%;">열 수：</div>
+      <div style="width: 40%;">열 수:</div>
       <div class="set-count" style="width: 60%;">
         <Button class="btn" :disabled="colCount <= 1" @click="setTableCol(colCount - 1)"><IconMinus /></Button>
         <div class="count-text">{{colCount}}</div>
@@ -119,7 +119,7 @@
     <Divider />
 
     <div class="row theme-switch">
-      <div style="width: 40%;">테마 테이블 사용：</div>
+      <div style="width: 40%;">테마 테이블 사용:</div>
       <div class="switch-wrapper" style="width: 60%;">
         <Switch 
           :value="hasTheme" 
@@ -154,7 +154,7 @@
         >마지막 열</Checkbox>
       </div>
       <div class="row">
-        <div style="width: 40%;">테마 색상：</div>
+        <div style="width: 40%;">테마 색상:</div>
         <Popover trigger="click" style="width: 60%;">
           <template #content>
             <ColorPicker

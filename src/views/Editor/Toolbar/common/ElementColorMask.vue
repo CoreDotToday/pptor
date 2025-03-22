@@ -1,7 +1,7 @@
 <template>
   <div class="element-color-mask">
     <div class="row">
-      <div style="width: 40%;">着色（蒙版）：</div>
+      <div style="width: 40%;">색상 입히기(마스크):</div>
       <div class="switch-wrapper" style="width: 60%;">
         <Switch 
           :value="hasColorMask" 
@@ -11,7 +11,7 @@
     </div>
     <template v-if="hasColorMask">
       <div class="row" style="margin-top: 15px;">
-        <div style="width: 40%;">蒙版颜色：</div>
+        <div style="width: 40%;">마스크 색상:</div>
         <Popover trigger="click" style="width: 60%;">
           <template #content>
             <ColorPicker
@@ -25,6 +25,7 @@
     </template>
   </div>
 </template>
+
 
 <script lang="ts" setup>
 import { ref, watch } from 'vue'

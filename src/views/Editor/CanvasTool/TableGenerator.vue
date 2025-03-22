@@ -26,7 +26,7 @@
 
     <div class="custom" v-else>
       <div class="row">
-        <div class="label" style="width: 25%;">행 수：</div>
+        <div class="label" style="width: 25%;">행 수:</div>
         <NumberInput
           :min="1"
           :max="20"
@@ -35,7 +35,7 @@
         />
       </div>
       <div class="row">
-        <div class="label" style="width: 25%;">열 수：</div>
+        <div class="label" style="width: 25%;">열 수:</div>
         <NumberInput
           :min="1"
           :max="20"

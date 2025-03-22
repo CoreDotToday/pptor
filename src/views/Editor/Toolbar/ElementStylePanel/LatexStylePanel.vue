@@ -7,7 +7,7 @@
     <Divider />
 
     <div class="row">
-      <div style="width: 40%;">색상：</div>
+      <div style="width: 40%;">색상:</div>
       <Popover trigger="click" style="width: 60%;">
         <template #content>
           <ColorPicker
@@ -19,7 +19,7 @@
       </Popover>
     </div>
     <div class="row">
-      <div style="width: 40%;">두께：</div>
+      <div style="width: 40%;">두께:</div>
       <NumberInput 
         :min="1"
         :max="3"
