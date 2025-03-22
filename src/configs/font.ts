@@ -29,4 +29,10 @@ export const FONTS = [
   { label: 'PT Serif', value: 'PT Serif' },
   { label: 'Bebas Neue', value: 'Bebas Neue' },
   { label: 'Anton', value: 'Anton' },
+  // 시스템 폰트 추가
+  { label: 'Calibri', value: 'Calibri' },
+  { label: 'Arial', value: 'Arial' },
+  { label: 'Verdana', value: 'Verdana' },
+  { label: 'Helvetica', value: 'Helvetica' },
+  { label: 'Times New Roman', value: 'Times New Roman' },
 ]
