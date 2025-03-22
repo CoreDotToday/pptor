@@ -32,11 +32,11 @@ export const readClipboard = (): Promise<string> => {
   return new Promise((resolve, reject) => {
     if (navigator.clipboard?.readText) {
       navigator.clipboard.readText().then(text => {
-        if (!text) reject('剪贴板为空或者不包含文本')
+        if (!text) reject('클립보드가 비어 있거나 텍스트가 없습니다.')
         return resolve(text)
       })
     }
-    else reject('浏览器不支持或禁止访问剪贴板，请使用快捷键 Ctrl + V')
+    else reject('브라우저에서 클립보드에 대한 액세스를 지원하지 않거나 금지하는 경우 단축키 Ctrl + V를 사용하세요.')
   })
 }
 

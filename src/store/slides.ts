@@ -69,22 +69,22 @@ export const useSlidesStore = defineStore('slides', {
       {
         name: '빨간색 기본형',
         id: 'template_1',
-        cover: 'https://asset.pptist.cn/img/template_1.jpg',
+        cover: 'https://ppt.core.today/images/template_1.jpg',
       },
       {
         name: '파란색 기본형',
         id: 'template_2',
-        cover: 'https://asset.pptist.cn/img/template_2.jpg',
+        cover: 'https://ppt.core.today/images/template_2.jpg',
       },
       {
         name: '보라색 기본형',
         id: 'template_3',
-        cover: 'https://asset.pptist.cn/img/template_3.jpg',
+        cover: 'https://ppt.core.today/images/template_3.jpg',
       },
       {
         name: '모란디 컬러 조합',
         id: 'template_4',
-        cover: 'https://asset.pptist.cn/img/template_4.jpg',
+        cover: 'https://ppt.core.today/images/template_4.jpg',
       },
     ], // 템플릿
   }),
