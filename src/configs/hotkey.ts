@@ -1,0 +1,147 @@
+export const enum KEYS {
+  C = 'C',
+  X = 'X',
+  Z = 'Z',
+  Y = 'Y',
+  A = 'A',
+  G = 'G',
+  L = 'L',
+  F = 'F',
+  D = 'D',
+  B = 'B',
+  P = 'P',
+  O = 'O',
+  R = 'R',
+  T = 'T',
+  MINUS = '-',
+  EQUAL = '=',
+  DIGIT_0 = '0',
+  DELETE = 'DELETE',
+  UP = 'ARROWUP',
+  DOWN = 'ARROWDOWN',
+  LEFT = 'ARROWLEFT',
+  RIGHT = 'ARROWRIGHT',
+  ENTER = 'ENTER',
+  SPACE = ' ',
+  TAB = 'TAB',
+  BACKSPACE = 'BACKSPACE',
+  ESC = 'ESCAPE',
+  PAGEUP = 'PAGEUP',
+  PAGEDOWN = 'PAGEDOWN',
+  F5 = 'F5',
+}
+
+interface HotkeyItem {
+  type: string
+  children: {
+    label: string
+    value?: string
+  }[]
+}
+
+export const HOTKEY_DOC: HotkeyItem[] = [
+  {
+    type: '공통',
+    children: [
+      { label: '잘라내기', value: 'Ctrl + X' },
+      { label: '복사', value: 'Ctrl + C' },
+      { label: '붙여넣기', value: 'Ctrl + V' },
+      { label: '텍스트만 붙여넣기', value: 'Ctrl + Shift + V' },
+      { label: '빠른 복사 및 붙여넣기', value: 'Ctrl + D' },
+      { label: '전체 선택', value: 'Ctrl + A' },
+      { label: '실행 취소', value: 'Ctrl + Z' },
+      { label: '다시 실행', value: 'Ctrl + Y' },
+      { label: '삭제', value: 'Delete / Backspace' },
+      { label: '다중 선택', value: 'Ctrl 또는 Shift 키 누르기' },
+      { label: '검색 및 바꾸기 열기', value: 'Ctrl + F' },
+      { label: '인쇄', value: 'Ctrl + P' },
+      { label: '팝업 닫기', value: 'ESC' },
+    ],
+  },
+  {
+    type: '슬라이드 쇼',
+    children: [
+      { label: '처음부터 슬라이드 쇼 시작', value: 'F5' },
+      { label: '현재 위치부터 슬라이드 쇼 시작', value: 'Shift + F5' },
+      { label: '이전 페이지로 이동', value: '↑ / ← / PgUp' },
+      { label: '다음 페이지로 이동', value: '↓ / → / PgDown' },
+      { label: '다음 페이지로 이동', value: 'Enter / Space' },
+      { label: '슬라이드 쇼 종료', value: 'ESC' },
+    ],
+  },
+  {
+    type: '슬라이드 편집',
+    children: [
+      { label: '새 슬라이드 만들기', value: 'Enter' },
+      { label: '캔버스 이동', value: 'Space + 마우스 드래그' },
+      { label: '캔버스 확대/축소', value: 'Ctrl + 마우스 휠' },
+      { label: '캔버스 확대', value: 'Ctrl + =' },
+      { label: '캔버스 축소', value: 'Ctrl + -' },
+      { label: '캔버스를 화면에 맞춤', value: 'Ctrl + 0' },
+      { label: '이전 페이지 (요소 미선택 시)', value: '↑' },
+      { label: '다음 페이지 (요소 미선택 시)', value: '↓' },
+      { label: '이전 페이지로 이동', value: '마우스 휠 위 / PgUp' },
+      { label: '다음 페이지로 이동', value: '마우스 휠 아래 / PgDown' },
+      { label: '텍스트 빠르게 추가', value: '빈 공간 더블 클릭 / T' },
+      { label: '사각형 빠르게 추가', value: 'R' },
+      { label: '원형 빠르게 추가', value: 'O' },
+      { label: '선 빠르게 추가', value: 'L' },
+      { label: '그리기 상태 종료', value: '마우스 오른쪽 클릭' },
+    ],
+  },
+  {
+    type: '요소 조작',
+    children: [
+      { label: '이동', value: '↑ / ← / ↓ / →' },
+      { label: '잠금', value: 'Ctrl + L' },
+      { label: '그룹화', value: 'Ctrl + G' },
+      { label: '그룹 해제', value: 'Ctrl + Shift + G' },
+      { label: '맨 앞으로 가져오기', value: 'Alt + F' },
+      { label: '맨 뒤로 보내기', value: 'Alt + B' },
+      { label: '가로세로 비율 유지', value: 'Ctrl 또는 Shift 누르기' },
+      { label: '수평/수직 선 만들기', value: 'Ctrl 또는 Shift 누르기' },
+      { label: '포커스된 요소 전환', value: 'Tab' },
+      { label: '이미지 자르기 확정', value: 'Enter' },
+      { label: '사용자 정의 도형 그리기 완료', value: 'Enter' },
+    ],
+  },
+  {
+    type: '표 편집',
+    children: [
+      { label: '다음 셀로 이동', value: 'Tab' },
+      { label: '셀 포커스 이동', value: '↑ / ← / ↓ / →' },
+      { label: '위에 행 추가', value: 'Ctrl + ↑' },
+      { label: '아래에 행 추가', value: 'Ctrl + ↓' },
+      { label: '왼쪽에 열 추가', value: 'Ctrl + ←' },
+      { label: '오른쪽에 열 추가', value: 'Ctrl + →' },
+    ],
+  },
+  {
+    type: '차트 데이터 편집',
+    children: [{ label: '다음 행으로 이동', value: 'Enter' }],
+  },
+  {
+    type: '텍스트 편집',
+    children: [
+      { label: '굵게', value: 'Ctrl + B' },
+      { label: '기울임꼴', value: 'Ctrl + I' },
+      { label: '밑줄', value: 'Ctrl + U' },
+      { label: '인라인 코드', value: 'Ctrl + E' },
+      { label: '윗첨자', value: 'Ctrl + ;' },
+      { label: '아랫첨자', value: `Ctrl + '` },
+      { label: '단락 선택', value: `ESC` },
+    ],
+  },
+  {
+    type: '기타 단축 조작',
+    children: [
+      { label: '이미지 추가 - 클립보드의 이미지 붙여넣기' },
+      { label: '이미지 추가 - 로컬 이미지를 캔버스로 드래그' },
+      { label: '이미지 추가 - SVG 코드를 캔버스에 붙여넣기' },
+      { label: '이미지 추가 - pexels 이미지 링크 붙여넣기' },
+      { label: '텍스트 추가 - 클립보드의 텍스트 붙여넣기' },
+      { label: '텍스트 추가 - 외부 선택 텍스트를 캔버스로 드래그' },
+      { label: '텍스트 편집 - 마크다운 문법으로 리스트 및 인용 생성' },
+    ],
+  },
+]
